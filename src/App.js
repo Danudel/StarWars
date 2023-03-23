@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import TableOfContent from './TableOfContent';
+import Movies from './Movies';
+import Favorite from './Favorite';
 
 function App() {
+
+  const title="Browse Films:";
+  const logoImgLink="https://lumiere-a.akamaihd.net/v1/images/sw_logo_stacked_2x-52b4f6d33087_7ef430af.png?region=0,0,586,254";
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+       <TableOfContent />
+      <div className="content">
+        <img className="logo" src={logoImgLink} alt="logo"/>
+        <Favorite/>
+        <h1>{title}</h1>
+        <Movies/>
+      </div>      
+     
     </div>
   );
 }

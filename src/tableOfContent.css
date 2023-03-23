@@ -1,0 +1,50 @@
+  /* On screens that are more than 769px wide,  sidebar on the side */
+
+@media screen and (min-width: 769px){
+  .sidebar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding-top: 10%;
+    background-color: #f1f1f1;
+    margin: 0;
+    width: 200px;
+    height: auto;
+    padding: 0;
+    padding-top: 10%;
+    border-radius: .3rem;
+  
+  }
+}
+
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+
+  /* On screens that are less than 768px wide, make the sidebar into a topbar */
+
+@media screen and (max-width: 768px){
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .container{
+    text-align: center;
+    width: 100%;
+  }
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+}
